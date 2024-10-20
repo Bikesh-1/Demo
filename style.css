@@ -1,0 +1,781 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#main{
+    /* background-color: black; */
+    position: relative;
+    z-index: 999999999;
+
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 0 2vw;
+}
+
+#hero-shape{
+    position: absolute;
+    width: 46vw;
+    height:36vw;
+    right: 0;
+    top: 70vh;
+    z-index: 99;
+}
+#hero-1{
+    width: 100%;
+    height: 100%;
+    background-color:#000000 ;
+    /* border-radius: 50%; */
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+    
+}
+
+#hero-2{
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(#0c0c0c,#000000);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#hero-3{
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(#0c0c0c,#000000);
+    border-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-3%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,30%);
+    }
+}
+#nav{
+    /* padding: 2vw  0vw; */
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+#nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+#nav-right h4{
+    padding: 10px 20px;
+    border: 1px solid #C2B8B1;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #171716;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+/* important  */
+#nav-right h4::after{
+    content:"" ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0); 
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    z-index: -1;
+}
+#nav-right h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-right h4 a{
+    text-decoration: none;
+    color:#171716 ;
+    position: relative;
+    z-index: 9;
+}
+#nav-right h4:hover {
+    color: rgb(255, 255, 255);
+}
+
+#nav #nav-left img{
+    height: 7vw;
+    
+}
+#middle #txt{
+    text-align: center;
+}
+#middle #txt h1{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#middle #txt h2{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#middle #txt p{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#bottom{
+
+    position:absolute;
+    top: 65%;
+    left: 4%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+}
+#bottom a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 2vw;
+    transition: all ease 0.2s;
+}
+
+#bottom a:nth-child(1):hover{
+    color: #0A66C2;
+}
+#bottom a:nth-child(2):hover{
+    background: linear-gradient(to right, #CA00BD, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#bottom a:nth-child(3):hover{
+    color: #0967FF;
+}
+#bottom a:nth-child(4):hover{
+    color: #488eff;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 2vw 2vw;
+}
+
+#middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+#page2 #middle-p2 #right-p2 video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 999;
+    /* width: 40vh; */
+    width: 90%;
+    height: 20%; 
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+
+#page2 h1 {
+    font-size: 2.5vw;
+}
+
+#middle-p2 {
+    padding: 2vw;
+}
+
+#page2 #middle-p2 #right-p2 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+#page2 #middle-p2 #right-p2 video {
+    width: 90%;
+    height: auto;
+    border-radius: 1vw;
+    object-fit: cover;
+    z-index: 9999; /* Ensure video is behind the text */
+    position: relative;
+}
+
+#page2 #middle-p2 #right-p2 #hover-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.712); 
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 99999; 
+    pointer-events: none; 
+    border-radius: 1vw;
+    padding: 2vw;
+    gap: 5vw;
+}
+
+#page2 #middle-p2 #right-p2 #hover-txt p {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Hover effect on video to display text */
+#page2 #middle-p2 #right-p2 video:hover + #hover-txt {
+    opacity: 1;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    padding: 2vw 2vw;
+}
+#page3 #circle{
+    height: 20vw;
+    width: 20vw;
+    background-color: rgba(255, 255, 255, 0.307);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 999;
+    border-radius: 50%;
+    filter: blur(2vw);
+}
+
+
+#page3 #pg-3txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 2vw;
+    color: white;
+}
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 2vw 2vw;
+}
+
+
+#page4 #eventscards {
+    gap: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+}
+
+#page4 #eventscards #card {
+    height: 30vw;
+    width: 20vw;
+    background-color: white;
+    border-radius: 2vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#page4 #eventscards #card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#page4 #eventscards #card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    color: white;
+    font-size: 2vw;
+}
+
+#page4 #eventscards #card .overlay .play-button {
+    padding: 1vw 2vw;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+#page4 #eventscards #card:hover .overlay {
+    opacity: 1;
+    /* background-color: orange; */
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 2vw 2vw;
+}
+
+#page5 #core-team h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.con{
+    padding: 2vw;
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-text h1{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0 2vw;
+    display: inline-block;
+}
+#gola{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+    
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+.elem{
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #c3c3c3;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    position: relative;
+    overflow: hidden;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+.elem:hover .overlay{
+    top:0;
+}
+#fixed-image{
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 2vw 10vw 2vw 10vw;
+    position: fixed;
+    z-index: 999999999999;
+    left: 70%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+.elem:hover h2{
+    color: white;
+}
+#page6 .elem:hover h1{
+    color: white;
+}
+#page6 .elem:hover p{
+    color: white;
+}
+
+#page6 .elem h1{
+    position: relative;
+    z-index: 999999;
+}
+#page6 .elem p{
+    position: relative;
+    z-index: 999999;
+}
+#page6{
+    min-height: 120vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 2vw 2vw;
+    overflow-x: hidden;
+
+}
+#page6 #cop-cards {
+    padding-top: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Aligns cards to the left */
+    gap: 2vw;
+}
+
+#page6 #cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#page6 #card1{
+    /* height: 30vw;
+    width: 30vw; */
+    /* background-color: white; */
+    position: relative;
+    overflow: hidden;
+}
+#page6 #card1 img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50%;
+    /* z-index: -1; */
+}
+#page6 #op-cards{
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Aligns cards to the left */
+    gap: 2vw;
+}
+
+#page6 #pr-cards{
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Aligns cards to the left */
+    gap: 2vw;
+}
+#page6 #design-cards{
+    padding-top: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Aligns cards to the left */
+    gap: 2vw;
+}
+
+#page6 #cop-cards .elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#page6 #op-cards .elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#page6 #pr-cards .elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#page6 #design-cards .elem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#fixed-image2{
+    height: 20vw;
+    width: 20vw;
+    /* background-color: red; */
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99999999999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+    /* background-color: red; */
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+#page7{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 2vw 2vw;
+    /* overflow-x: hidden; */
+
+}
+#page7 #ex-card #card1 {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative; /* Ensures the overlay and button are positioned correctly */
+}
+
+#page7 #ex-card #card1 img {
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover; /* Ensures the image fits perfectly in the circle */
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out; /* For smooth transitions */
+}
+
+#page7 #ex-card #card1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0; /* Initially hidden */
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for overlay */
+}
+
+#page7 #ex-card #card1:hover::before {
+    opacity: 0.8; /* Show the black overlay on hover */
+}
+
+#page7 #ex-card #card1 button {
+    /* text-decoration: none; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the button */
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.5vw 1vw;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for button */
+    cursor: pointer;
+}
+
+#page7 #ex-card #card1:hover button {
+    opacity: 1; /* Show the button when hovering */
+}
+#page7 #ex-card #card1 button a{
+    text-decoration: none;
+    color: #0967FF;
+    font-size: 2vw;
+}
+#core-team .elem a{
+    text-decoration: none;
+    color: #0967FF;
+    /* font-size: 2vw; */
+}
+
+#page6 a{
+    text-decoration: none;
+    color: #0967FF;
+}
+
+#page7 #ex-card #card1 p {
+    margin: 5px 0 0 0;
+    font-size: 1vw;
+    text-align: center;
+}
+#page7 #ex-card {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap if there are too many */
+    justify-content: center;
+    gap: 3vw;
+    padding-top: 2vw;
+}
+#page7 #ex-card #cards p{
+    font-size: 1vw;
+    /* font-weight: bold; */
+}
+#page7 #cards {
+    display: flex;
+    gap: 1.5vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#page8{
+    min-height: 150vh;
+    width: 100%;
+    /* background-color: #EFEBE2; */
+    position: relative;
+    padding: 2vw 2vw;
+    /* overflow-x: hidden; */
+
+}
+
+#footer{
+    position: fixed;
+    height: 105vh;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    bottom: 0;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    flex-direction: column;
+    padding: 1vw 3vw;
+}
+
+#footer h1{
+    font-size: 23vw;
+}
+
+
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#footer-bottom{
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+#footer-bottom-txt{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content:space-between ;
+}
+#footer-bottom-txt p{
+    font-weight:lighter;
+    margin-top: 2vw;
+}
+#page7b{
+    height: 100vh;
+    width: 100%;
+    background-color: #EFEBE2;
+    position: relative;
+    padding: 2vw 2vw;
+}
+#footer #footer-div img{
+    padding: 2vw;
+    height: 12vw;
+    width: 12vw;
+}
